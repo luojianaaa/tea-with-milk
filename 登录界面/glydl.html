@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script>
+ function checkLogin(){
+	 var flag=true;    
+	 var username=document.getElementById("username").value;
+	 var pwd=document.getElementById("pwd").value;
+	 if(username=="" || username==null){  
+		 alert("请输入用户名");
+		 flag=false;
+	 }else if(pwd=="" || pwd==null){
+		 alert("请输入密码");
+		 flag=false;
+	 }else if(username=="user" && pwd=="1234"){
+		 flag=true;
+	 }else{
+		 alert("用户名或者密码不正确!!!");
+		 flag=false;
+	 }
+	 return flag;
+ }
+</script>
+</head>
+
+<body>
+<div class="all">
+  <h2 ><span>管理员</span>&nbsp;&nbsp;登录</h2>
+  <form action="./dljm.html" method="post" onsubmit="return checkLogin();">
+    <div class="kong">
+      <span1 style="width:10%">用户名：</span>
+      <input type="text" id="username" class="hm" placeholder="请输入用户名" />
+    </div>
+    <br/><br/>
+    <div class="kong">
+      <span1 style="width:10%">密码：</span>
+      <input type="password" id="pwd" class="hm" placeholder="请输入密码" />
+    </div>
+    <p style="text-align:right";color:#F03;><a  href="#">忘记密码&nbsp;?</a></p>
+    <input type="submit" value="登录" class="dl" />
+  </form>
+</div>
+</body>
+<style>
+body{background:url(images/glydl.jpg);}
+.all {
+	text-align: center;
+	width: 500px;
+	margin: 150px auto;
+}
+h2 {
+	font-size: 42px;
+	font-weight: 500;
+	color: red;
+	font-style: italic;
+}
+span {
+	color: #00F;
+}
+.kong {
+	border: 0;
+	border-bottom: solid #999 1px;
+	display: inline;
+	margin: auto 0;
+	padding: 20px 0;
+}
+.hm {
+	width: 90%;
+	border: 0;
+	font-size: 16px;
+	padding: 20px 0;
+	outline: none;
+	margin: auto 0;
+}
+.dl {
+	border-radius: 40px;
+	height: 40px;
+	width: 90%;
+	border: 0;
+	background:#0F0;
+	color: #FFF;
+	margin: 20px auto;
+}
+</style>
+</html>
